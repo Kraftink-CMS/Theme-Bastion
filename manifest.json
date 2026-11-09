@@ -4,6 +4,10 @@
     "authors": ["nivcoo","KraftInk"],
     "license": "MIT",
     "market": {
+        "readme": {
+            "en": "lang/en/market.md",
+            "fr": "lang/fr/market.md"
+        },
         "author": {
             "name": "nivcoo, KraftInk",
             "url": "https://github.com/kraftink-cms"
