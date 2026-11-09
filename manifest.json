@@ -21,7 +21,7 @@
     "type": "theme",
     "target": "site",
     "theme_color": "#0c0e0d",
-    "version": "1.0.1",
+    "version": "1.0.2-dev",
     "description": "bastion::messages.description",
     "requires": {
         "cms": ">=0.0.1",
