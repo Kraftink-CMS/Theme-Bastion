@@ -4,6 +4,10 @@
     "authors": ["nivcoo","KraftInk"],
     "license": "MIT",
     "market": {
+        "readme": {
+            "en": "lang/en/market.md",
+            "fr": "lang/fr/market.md"
+        },
         "author": {
             "name": "nivcoo, KraftInk",
             "url": "https://github.com/kraftink-cms"
@@ -17,7 +21,7 @@
     "type": "theme",
     "target": "site",
     "theme_color": "#0c0e0d",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "bastion::messages.description",
     "requires": {
         "cms": ">=0.0.1",
