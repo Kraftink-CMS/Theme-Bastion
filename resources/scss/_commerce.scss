@@ -1,0 +1,124 @@
+.theme-bastion {
+    #shop-catalogue-products .product-card {
+        .product-image {
+            border-block-end: 1px solid var(--bastion-line);
+            background-color: var(--bastion-bg) !important;
+        }
+
+        .card-body {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .card-body > p:first-child:not(:empty) {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--bastion-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            &::before {
+                flex: 0 0 1rem;
+                height: 1px;
+                background: var(--bastion-accent);
+                content: "";
+            }
+        }
+
+        .card-body > .h5 {
+            font-size: 1.5rem;
+
+            a {
+                color: var(--bastion-ink);
+
+                &:hover,
+                &:focus-visible {
+                    color: var(--bastion-accent);
+                }
+            }
+        }
+
+        .card-body > .fs-4 {
+            color: var(--bastion-accent);
+            font-variant-numeric: tabular-nums;
+        }
+
+        form > [role="group"] {
+            display: block !important;
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .btn {
+            min-height: 2.75rem;
+        }
+    }
+
+    [data-shop-purchase] {
+        .fs-3.fw-bold {
+            color: var(--bastion-accent);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .btn-primary,
+        .form-control {
+            min-height: 2.75rem;
+        }
+    }
+
+    section:has(> #shop-order-deliveries) > dl.site-panel.row {
+        --bs-gutter-x: 0;
+        margin-inline: 0;
+    }
+
+    #vote-sites .content-card {
+        .card-body > .bi {
+            display: grid;
+            width: 3rem;
+            height: 3rem;
+            place-items: center;
+            border: 1px solid var(--bastion-line);
+            background: var(--bastion-bg);
+            font-size: 1.25rem !important;
+        }
+
+        .card-body > .h5 {
+            font-size: 1.5rem;
+        }
+
+        :where(.btn, .form-control, .form-select) {
+            min-height: 2.75rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        #vote-sites > .row:has(> :nth-child(2):last-child) > .col-xl-4 {
+            width: 50%;
+        }
+    }
+
+    @media (forced-colors: none) {
+        progress[id^="vote-goal-"] {
+            height: 0.625rem;
+            appearance: none;
+            border: 0;
+            background: var(--soft);
+
+            &::-webkit-progress-bar {
+                background: var(--soft);
+            }
+
+            &::-webkit-progress-value {
+                background: var(--bastion-accent);
+            }
+
+            &::-moz-progress-bar {
+                background: var(--bastion-accent);
+            }
+        }
+    }
+}

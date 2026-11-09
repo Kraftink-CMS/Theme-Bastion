@@ -1,0 +1,17 @@
+html {
+    color-scheme: dark;
+}
+
+body {
+    background: #0c0e0d;
+    color: #eee9db;
+}
+
+a {
+    color: #d1ab6f;
+}
+
+blockquote {
+    border-color: #716e61;
+    color: #b7b6ab;
+}

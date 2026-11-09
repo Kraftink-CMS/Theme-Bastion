@@ -1,0 +1,19 @@
+.theme-bastion .tox.tox-tinymce {
+    border-color: #343832;
+    border-radius: 0;
+}
+
+.theme-bastion .tox:not(.tox-tinymce-inline) .tox-editor-header,
+.theme-bastion .tox .tox-toolbar,
+.theme-bastion .tox .tox-toolbar__overflow,
+.theme-bastion .tox .tox-toolbar__primary,
+.theme-bastion .tox .tox-statusbar {
+    border-color: #343832;
+    background-color: #151918;
+}
+
+.theme-bastion .tox .tox-tbtn:hover,
+.theme-bastion .tox .tox-tbtn--enabled,
+.theme-bastion .tox .tox-tbtn--enabled:hover {
+    background-color: #32291b;
+}

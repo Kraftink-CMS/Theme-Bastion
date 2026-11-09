@@ -1,0 +1,154 @@
+.theme-bastion {
+    :is(.wiki-navigation, .site-sidebar) {
+        overflow-wrap: anywhere;
+
+        > .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.9rem 1rem !important;
+            box-shadow: inset 2px 0 var(--accent);
+            font-family: var(--bastion-mono);
+            font-size: 0.8125rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            > .bi {
+                flex: none;
+                margin: 0 !important;
+            }
+
+            > a {
+                color: var(--ink);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+
+        > .card-body {
+            padding: 0.65rem 1rem !important;
+        }
+
+        summary {
+            padding-block: 0.4rem;
+            cursor: pointer;
+        }
+
+        summary::marker {
+            color: var(--accent);
+        }
+
+        a[aria-current="page"] {
+            display: block;
+            padding: 0.25rem 0.5rem;
+            border-inline-start: 2px solid var(--accent);
+            background: var(--bs-primary-bg-subtle);
+            color: var(--ink);
+            text-decoration: none;
+        }
+    }
+
+    .site-panel:has(:is(#wiki-search, #faq-search, #staff-search)) {
+        .form-label {
+            color: var(--muted);
+            font-family: var(--bastion-mono);
+            font-size: 0.8125rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .form-control {
+            min-inline-size: 0;
+        }
+    }
+
+    :is(#wiki-public-documents, #faq-public-documents, #staff-public-documents) .section-heading {
+        padding-block-end: 0.6rem;
+        border-block-end: 1px solid var(--line);
+    }
+
+    :is(#wiki-public-documents, #staff-public-documents) .content-card {
+        overflow-wrap: anywhere;
+
+        h3 a:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    #wiki-public-documents .content-card .card-body > .bi {
+        display: grid !important;
+        inline-size: 2.5rem;
+        block-size: 2.5rem;
+        place-items: center;
+        border: 1px solid var(--line);
+        background: var(--soft);
+    }
+
+    .faq-questions > details.list-group-item {
+        padding: 0 !important;
+        border-inline-start: 2px solid var(--line);
+
+        &[open] {
+            border-inline-start-color: var(--accent);
+        }
+
+        > summary {
+            padding: 0.9rem 1.25rem;
+            overflow-wrap: anywhere;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--soft);
+            }
+
+            &:focus-visible {
+                outline-offset: -2px;
+            }
+
+            &::marker {
+                color: var(--accent);
+            }
+        }
+
+        > .prose,
+        > a {
+            margin-inline: 1.25rem;
+        }
+
+        > a {
+            margin-block-end: 1.25rem;
+        }
+    }
+
+    .staff-card {
+        overflow-wrap: anywhere;
+
+        h2 {
+            font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+        }
+
+        header > div {
+            min-inline-size: 0;
+        }
+
+        header > :is(img, .bi-person-square) {
+            flex: 0 0 4.5rem;
+            inline-size: 4.5rem;
+            block-size: 4.5rem;
+            border: 1px solid var(--line);
+            background: var(--soft);
+        }
+
+        header > .bi-person-square {
+            display: grid;
+            place-items: center;
+        }
+
+        .prose > :last-child {
+            margin-block-end: 0;
+        }
+    }
+}
