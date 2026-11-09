@@ -1,0 +1,59 @@
+{
+    "id": "bastion",
+    "name": "Bastion",
+    "authors": ["nivcoo","KraftInk"],
+    "license": "MIT",
+    "market": {
+        "author": {
+            "name": "nivcoo, KraftInk",
+            "url": "https://github.com/kraftink-cms"
+        },
+        "description": "bastion::market.description",
+        "image": {
+            "en": "preview-en.jpg",
+            "fr": "preview-fr.jpg"
+        }
+    },
+    "type": "theme",
+    "target": "site",
+    "theme_color": "#0c0e0d",
+    "version": "1.0.0",
+    "description": "bastion::messages.description",
+    "requires": {
+        "cms": ">=0.0.1",
+        "php": "^8.3"
+    },
+    "integrations": {
+        "plugin:shop": ">=0.0.1",
+        "plugin:vote": ">=0.0.1",
+        "plugin:wiki": ">=0.0.1",
+        "plugin:staff": ">=0.0.1",
+        "plugin:faq": ">=0.0.1",
+        "plugin:support": ">=0.0.1",
+        "plugin:forum": ">=0.0.1"
+    },
+    "assets": {
+        "styles": ["theme.css"],
+        "scripts": [],
+        "fonts": [
+            "fonts/roboto-latin-400-normal.woff2",
+            "fonts/roboto-latin-500-normal.woff2",
+            "fonts/roboto-latin-700-normal.woff2",
+            "fonts/oswald-variable.woff"
+        ],
+        "images": ["images/relay.webp"]
+    },
+    "build": {
+        "scss": ["resources/scss/theme.scss"]
+    },
+    "editor": {
+        "appearance": "auto",
+        "dark": {
+            "ui": "editor/dark-ui.css",
+            "content": "editor/dark-content.css"
+        }
+    },
+    "capabilities": {
+        "appearance": ["dark"]
+    }
+}
