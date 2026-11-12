@@ -144,8 +144,9 @@
                                 <li>
                                     <a href="{{ $shortcut['url'] }}"
                                         @if ($shortcut['new_tab'] ?? false) target="_blank" rel="noopener noreferrer" @endif>
-                                        <i class="bi bi-{{ $shortcut['icon'] ?? 'arrow-up-right-square' }}"
-                                            aria-hidden="true"></i>
+                                        <span class="text-primary-emphasis">
+                                            <x-content-icon :name="$shortcut['icon'] ?? 'arrow-up-right-square'" />
+                                        </span>
                                         <span>{{ $shortcut['label'] }}
                                             @if ($shortcut['new_tab'] ?? false)
                                                 <span class="visually-hidden">{{ __('admin.social.new_tab') }}</span>
@@ -170,7 +171,9 @@
                                 @foreach ($socialLinks as $socialLink)
                                     <li>
                                         <a href="{{ $socialLink['url'] }}" target="_blank" rel="noopener noreferrer me">
-                                            <i class="bi bi-{{ $socialLink['icon'] }}" aria-hidden="true"></i>
+                                            <span class="text-primary-emphasis">
+                                                <x-content-icon :name="$socialLink['icon']" />
+                                            </span>
                                             <span>{{ $socialLink['title'] }}<span
                                                     class="visually-hidden">{{ __('admin.social.new_tab') }}</span></span>
                                             <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
